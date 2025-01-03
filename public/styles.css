@@ -6,6 +6,14 @@ body, h1, h2, h3, p, ul, li {
   font-family: Arial, sans-serif;
 }
 
+/* Basic CSS */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -103,6 +111,25 @@ nav ul li a:hover {
 
 .side-menu ul li a:hover {
   color: #fff;
+}
+
+/* Hide regular navbar and show hamburger on mobile */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide the regular navbar links */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger icon */
+  }
+
+  .side-menu.open {
+    right: 0; /* Open the side menu */
+  }
+
+  .nav-links.open {
+    display: none; /* Hide regular navbar links when the menu is open */
+  }
 }
 
 /* Global styles */
