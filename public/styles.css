@@ -20,6 +20,7 @@ nav {
 nav img {
   height: 50px;
   width: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure the image scales properly */
 }
 
 nav h1 {
@@ -52,7 +53,6 @@ nav ul li a:hover {
   text-decoration: underline;
   transform: scale(1.05); /* Slight zoom effect */
 }
-
 
 /* Global styles */
 body {
@@ -350,6 +350,33 @@ button:hover, .btn:hover {
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section#trainers div, section#testimonials div {
+    width: 45%; /* Adjust trainers and testimonials sections */
+  }
+
+  #membership ul, #personal-training ul {
+    flex-direction: column; /* Stack membership and personal training cards */
+  }
+
+  #membership li, #personal-training li {
+    width: 90%; /* Adjust card width for better mobile experience */
+  }
+
+  section#home h2 {
+    font-size: 3rem; /* Adjust home section text size */
+  }
+
+  nav img {
+    height: 40px; /* Adjust logo size */
+  }
+}
+
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -366,5 +393,13 @@ button:hover, .btn:hover {
 
   #membership li, #personal-training li {
     width: 100%; /* Full width on smaller screens */
+  }
+
+  section#home h2 {
+    font-size: 2rem; /* Adjust home section text size */
+  }
+
+  nav img {
+    height: 30px; /* Adjust logo size for very small screens */
   }
 }
