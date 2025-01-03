@@ -2,7 +2,8 @@
   "name": "bfit-gym",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.bfit.com",
+  "homepage": "https://VarnankSharma.github.io/BfitGym",
+
 
   "dependencies": {
     "cra-template": "1.2.0",
