@@ -20,7 +20,6 @@ nav {
 nav img {
   height: 50px;
   width: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Ensure the image scales properly */
 }
 
 nav h1 {
@@ -52,6 +51,58 @@ nav ul li a:hover {
   color: #fff; /* White on hover */
   text-decoration: underline;
   transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #FFD700;
+  border-radius: 5px;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1001;
+  transition: right 0.3s ease-in-out;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.side-menu ul li a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+  color: #fff;
 }
 
 /* Global styles */
@@ -103,17 +154,19 @@ section#home p.timing {
   margin-top: 20px;
   font-size: 1.5rem;
   border: 2px solid #FFD700; /* Golden border around the box */
-  position: absolute;
-  bottom: 20px; /* Align the timing box at the bottom */
+  position: relative; /* Change from absolute to relative */
+  bottom: auto; /* Remove bottom positioning */
   left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
+  transform: translateX(-50%);
 }
 
 section#home p.moto {
   font-size: 3rem;
   color: #FFD700;
+  margin-top: 1rem;
 }
 
+/* Trainers Section */
 section#trainers div, section#testimonials div, section#membership ul, section#personal-training p {
   margin-bottom: 1rem;
   background-color: #222; /* Dark gray for cards */
@@ -350,41 +403,24 @@ button:hover, .btn:hover {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1024px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  section#trainers div, section#testimonials div {
-    width: 45%; /* Adjust trainers and testimonials sections */
-  }
-
-  #membership ul, #personal-training ul {
-    flex-direction: column; /* Stack membership and personal training cards */
-  }
-
-  #membership li, #personal-training li {
-    width: 90%; /* Adjust card width for better mobile experience */
-  }
-
-  section#home h2 {
-    font-size: 3rem; /* Adjust home section text size */
-  }
-
-  nav img {
-    height: 40px; /* Adjust logo size */
-  }
-}
-
 @media screen and (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    display: none; /* Hide the nav links on mobile */
   }
 
+  /* Show the hamburger menu on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Side menu visible when it's open */
+  .side-menu.open {
+    right: 0;
+  }
+
+  /* Adjust layout for mobile view */
   section#trainers div, section#testimonials div {
-    width: 100%; /* Stack the trainer and testimonial sections on mobile */
+    width: 100%; /* Stack trainer and testimonial sections on mobile */
   }
 
   #membership ul, #personal-training ul {
@@ -395,11 +431,13 @@ button:hover, .btn:hover {
     width: 100%; /* Full width on smaller screens */
   }
 
-  section#home h2 {
-    font-size: 2rem; /* Adjust home section text size */
+  section#home p.timing {
+    font-size: 1.2rem; /* Reduce font size for smaller screens */
+    margin-top: 10px; /* Reduce space between elements */
   }
 
-  nav img {
-    height: 30px; /* Adjust logo size for very small screens */
+  section#home p.moto {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+    margin-top: 10px; /* Adjust spacing */
   }
 }
