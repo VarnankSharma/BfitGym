@@ -271,7 +271,7 @@ form textarea {
 }
 
 form textarea {
-  resize: vertical;
+  resize:none;
 }
 
 form button {
@@ -377,4 +377,18 @@ button:hover {
 
 * {
   transition: all 0.3s ease; /* Smooth animations for all elements */
+}
+.personal-training-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  gap: 2rem; /* Adds some space between the membership box and the button */
+  padding: 2rem;
+}
+
+.button {
+  width: 50%; /* Adjust width for centering */
+  text-align: center;
+  display: block;
+  margin: 0 auto; /* Center button horizontally */
 }
