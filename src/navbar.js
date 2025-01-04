@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '/assets/Logo.png'; // Adjusted to reflect public directory usage
+import logo from '../src/assets/Logo.png'; // Adjusted to reflect public directory usage
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
