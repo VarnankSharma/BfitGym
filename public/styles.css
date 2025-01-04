@@ -272,3 +272,58 @@ footer {
   background-color: #222;
   color: #f0a500; /* Golden text */
 }
+/* Navbar Links */
+.nav-links li a:hover {
+  color: #f0a500; /* Golden color on hover */
+  text-decoration: underline; /* Adds an underline effect */
+}
+
+/* Membership Boxes */
+.membership-box:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Trainer Boxes */
+.trainer-box:hover {
+  transform: translateY(-5px); /* Moves slightly upward */
+  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
+  transition: all 0.3s ease;
+}
+
+/* Testimonials Section */
+.testimonial:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
+  transition: all 0.3s ease;
+}
+
+/* Form Submit Button */
+form button:hover {
+  background-color: #fff; /* White background on hover */
+  color: #f0a500; /* Golden text */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5); /* Light glow effect */
+  transition: all 0.3s ease;
+}
+
+/* Footer Links (if any links in footer) */
+footer a:hover {
+  color: #f0a500; /* Golden text */
+  text-decoration: underline; /* Adds underline effect */
+}
+
+/* Generic Buttons (if used) */
+button:hover {
+  background-color: #fff; /* White background */
+  color: #f0a500; /* Golden text */
+  transform: scale(1.1); /* Slight zoom */
+  transition: all 0.3s ease;
+}
+
+/* Cards or Boxes */
+.card:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 4px 15px rgba(240, 165, 0, 0.5); /* Golden shadow */
+  transition: all 0.3s ease;
+}
