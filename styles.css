@@ -158,7 +158,7 @@ p.timing {
   color: #fff; /*a White text */
 }
 .membership-box button{
-  align-items: center;
+  align-self: center;
 
 }
 /* Trainers Section */
