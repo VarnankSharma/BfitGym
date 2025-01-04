@@ -24,135 +24,122 @@ section {
   color: #fff; /* White text */
 }
 
-/* Ensure the navigation items stay in the same line by default */
-nav ul {
-  list-style: none;
-  display: flex; /* Flexbox ensures items stay in a line */
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+.nav-links {
+  display: flex;
   gap: 15px;
-  margin: 0;
-  padding: 0;
-  align-items: center; /* Ensure vertical centering */
 }
 
-nav ul li {
-  display: inline;
+.nav-links li {
+  list-style: none;
 }
 
-nav ul li a {
-  color: #FFD700; /* Golden links */
+.nav-links li a {
+  color: #FFD700;
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #fff; /* White on hover */
+.nav-links li a:hover {
+  color: #fff;
   text-decoration: underline;
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05);
 }
 
-/* For small screens - mobile version */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide the regular navbar links */
-  }
-
-  .hamburger {
-    display: flex; /* Show the hamburger icon */
-  }
-
-  .side-menu.open {
-    right: 0; /* Open the side menu */
-  }
-  
-  /* Override the side menu */
-  .side-menu ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .side-menu ul li {
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .side-menu ul li a {
-    color: #FFD700;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-  }
-
-  .side-menu ul li a:hover {
-    color: #fff;
-  }
-}
-
-
-/* Sections */
-section#home {
-  background-color: #FFD700; /* Golden background */
-  color: #000; /* Black text */
-  text-align: center;
-}
-
-section#home h2 {
-  font-size: 5rem; /* Large text for home section */
-  font-weight: bold;
-}
-
-section#home p.timing {
-  background-color: #222;
-  color: #FFD700;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1.5rem;
-  border: 2px solid #FFD700;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-/* Membership Section */
-#membership ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-#membership li {
-  background-color: #222;
-  color: #FFD700;
-  padding: 1.5rem;
-  width: 200px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-}
-
-#membership li:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-}
-
-/* Buttons */
-button, .btn {
-  background-color: #FFD700;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 5px;
+/* Hamburger Menu (For Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
 }
 
-button:hover, .btn:hover {
-  background-color: #fff;
-  color: #FFD700;
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700;
 }
 
-/* Footer */
-footer {
-  background-color: #333;
-  color: #FFD700;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Home Section Styling */
+#home {
+  background-image: url('../assets/gym-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* White text */
   text-align: center;
+  padding: 5rem 2rem;
+}
+
+#home h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: #000; /* Black background */
+  color: #FFD700; /* Yellow text */
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+#home p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+#home p.timing {
+  background-color: #000; /* Black box for timings */
+  color: #FFD700; /* Golden text */
   padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  display: inline-block;
+  border: 2px solid #FFD700;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
