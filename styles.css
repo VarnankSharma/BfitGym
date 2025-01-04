@@ -101,8 +101,8 @@ ul {
 /* Home Section */
 .home-section {
   height: 100vh;
-  background: transparent!important;
-  background-image:url('/public/pubAssets/1.jpeg')!important;
+  background: black; /* Fallback for browsers without support */
+  background-image: url('../src/assets/1.jpeg'); /* Ensure correct path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -113,8 +113,8 @@ ul {
   text-align: center;
   color: white;
   padding: 2rem;
-  
 }
+
 home-section.welcome{
   font-size: 5rem;
 }
