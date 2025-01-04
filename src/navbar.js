@@ -25,7 +25,7 @@ function Navbar() {
         </div>
 
         {/* Regular Navbar (Hidden on mobile) */}
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <li><a href="#home">Home</a></li>
           <li><a href="#trainers">Trainers</a></li>
           <li><a href="#membership">Membership</a></li>
@@ -33,19 +33,6 @@ function Navbar() {
           <li><a href="#contact-us">Contact</a></li>
         </ul>
       </div>
-
-      {/* Side Menu - Mobile Only */}
-      {menuOpen && (
-        <div className="side-menu">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#trainers">Trainers</a></li>
-            <li><a href="#membership">Membership</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact-us">Contact</a></li>
-          </ul>
-        </div>
-      )}
     </nav>
   );
 }

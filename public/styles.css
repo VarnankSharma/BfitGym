@@ -47,22 +47,25 @@ nav h1 {
   font-size: 2rem;
 }
 
-nav ul {
+/* Center the navigation links */
+.nav-links {
   list-style: none;
   display: flex;
   gap: 15px;
   margin: 0;
   padding: 0;
+  flex-grow: 1;
+  justify-content: center; /* Center align the navigation links */
 }
 
-nav ul li a {
+.nav-links li a {
   color: #FFD700; /* Golden links */
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
   color: #fff; /* White on hover */
   text-decoration: underline;
   transform: scale(1.05);
@@ -122,8 +125,16 @@ nav ul li a:hover {
 
 /* Responsive Navbar */
 @media screen and (max-width: 768px) {
-  nav ul {
+  .nav-links {
     display: none; /* Hide regular navbar links */
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show side menu links */
+    flex-direction: column;
   }
 
   .hamburger {
