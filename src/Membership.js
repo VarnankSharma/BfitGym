@@ -11,7 +11,7 @@ function Membership() {
         </div>
         <div className="membership-box">
           <h3>3 Months</h3>
-          <span>Rs 3000</span>
+          <span>Rs 3500</span>
         </div>
         <div className="membership-box">
           <h3>6 Months</h3>
