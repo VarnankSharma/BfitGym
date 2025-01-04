@@ -42,12 +42,14 @@ nav {
 
 nav .logo-container {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: center; /* Vertically center the logo and gym name */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 10px; /* Space between the logo and the gym name */
 }
 
 nav .logo-container img {
   width: 50px;
+  height:auto;
 }
 
 nav .logo-container h1 {
