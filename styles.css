@@ -1,4 +1,137 @@
-/* Membership Boxes */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #000; /* Black background */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: #f0a500; /* Golden text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #f0a500; /* Golden color */
+  margin: 4px 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links.active {
+  display: block;
+}
+
+.nav-links li a {
+  color: #f0a500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #fff;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Home Section */
+.home-section {
+  height: 100vh;
+  background-image: url('../src/assets/1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.motto {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.timing {
+  font-size: 1.2rem;
+}
+
+/* Membership Section */
+.membership-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
 .membership-box {
   background-color: #111; /* Dark background */
   border: 1px solid #f0a500; /* Golden border */
@@ -6,57 +139,112 @@
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  color: #fff; /* White text */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
-.membership-box:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
+.membership-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f0a500; /* Golden headings */
+  text-align: center;
 }
 
+.membership-box span {
+  font-size: 1.2rem;
+  color: #fff; /*a White text */
+}
 
-/* Trainer Boxes */
+/* Trainers Section */
+.trainers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
 .trainer-box {
   background-color: #111; /* Dark background */
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.trainer-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #f0a500; /* Golden headings */
+  text-align: center;
+}
+
+.trainer-box span {
+  font-size: 1rem;
   color: #fff; /* White text */
 }
 
-.trainer-box:hover {
-  transform: translateY(-5px); /* Moves slightly upward */
-  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
-}
-
-/* Navbar Links */
-.nav-links li a {
-  color: #f0a500; /* Golden text */
-  font-size: 1rem;
-  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effects */
-}
-
-.nav-links li a:hover {
-  color: #fff; /* White text on hover */
-  text-decoration: underline; /* Adds an underline effect */
-}
-
 /* Testimonials Section */
+#testimonials {
+  padding: 2rem;
+  background-color: #111; /* Dark background */
+}
+
 .testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #f0a500; /* Golden border */
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  color: #fff; /* White text */
+}
+
+/* Contact Us Section */
+#error-message {
+  color: red;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
   padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  background: #111; /* Dark background */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.testimonial:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
+form div {
+  margin-bottom: 1rem;
 }
 
-/* Form Submit Button */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #f0a500; /* Golden border */
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #000; /* Black input background */
+  color: #fff; /* White text */
+}
+
+form textarea {
+  resize: vertical;
+}
+
 form button {
   background-color: #f0a500;
   color: black;
@@ -65,16 +253,80 @@ form button {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth hover effects */
+  transition: background-color 0.3s;
 }
 
+form button:hover {
+  background-color: #e58c00;
+}
+
+form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #f0a500; /* Golden text */
+}
+/* Navbar Links */
+.nav-links li a:hover {
+  color: #f0a500; /* Golden color on hover */
+  text-decoration: underline; /* Adds an underline effect */
+}
+
+/* Membership Boxes */
+.membership-box:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Trainer Boxes */
+.trainer-box:hover {
+  transform: translateY(-5px); /* Moves slightly upward */
+  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
+  transition: all 0.3s ease;
+}
+
+/* Testimonials Section */
+.testimonial:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 10px rgba(240, 165, 0, 0.5); /* Golden shadow */
+  transition: all 0.3s ease;
+}
+
+/* Form Submit Button */
 form button:hover {
   background-color: #fff; /* White background on hover */
   color: #f0a500; /* Golden text */
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5); /* Light glow effect */
+  transition: all 0.3s ease;
 }
 
-/* Generic Buttons */
+/* Footer Links (if any links in footer) */
+footer a:hover {
+  color: #f0a500; /* Golden text */
+  text-decoration: underline; /* Adds underline effect */
+}
+
+/* Generic Buttons (if used) */
+button:hover {
+  background-color: #fff; /* White background */
+  color: #f0a500; /* Golden text */
+  transform: scale(1.1); /* Slight zoom */
+  transition: all 0.3s ease;
+}
+
+/* Cards or Boxes */
+.card:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 4px 15px rgba(240, 165, 0, 0.5); /* Golden shadow */
+  transition: all 0.3s ease;
+}
 .button {
   background-color: #f0a500;
   color: white;
@@ -83,31 +335,14 @@ form button:hover {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth hover effects */
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #fff; /* White background */
-  color: #f0a500; /* Golden text */
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5); /* Glow effect */
+  background-color: white;
+  color: #f0a500;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
 }
-
-/* Cards or Boxes */
-.card {
-  background-color: #111; /* Dark background */
-  border: 1px solid #f0a500; /* Golden border */
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-}
-
-.card:hover {
-  transform: scale(1.05); /* Slight zoom */
-  box-shadow: 0 4px 15px rgba(240, 165, 0, 0.5); /* Golden shadow */
-}
-
-/* Global Smooth Animations */
 * {
   transition: all 0.3s ease; /* Smooth animations for all elements */
 }
