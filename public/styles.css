@@ -113,14 +113,17 @@ ul {
   color: white;
   padding: 2rem;
 }
+.welcome{
+  font-size: 5rem;
+}
 
 .motto {
-  font-size: 5rem;
+  font-size: 3rem;
   margin: 10px 0;
 }
 
 p.timing {
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 
 /* Membership Section */
