@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/BfitGym/static/js/main.0154f103.js",
+    "main.js": "/BfitGym/static/js/main.4b56c24a.js",
     "static/media/Logo.png": "/BfitGym/static/media/Logo.1bab01283d6f5a57a14c.png",
     "static/media/1.jpeg": "/BfitGym/static/media/1.e21a212097a28c520f2d.jpeg",
     "index.html": "/BfitGym/index.html",
-    "main.0154f103.js.map": "/BfitGym/static/js/main.0154f103.js.map"
+    "main.4b56c24a.js.map": "/BfitGym/static/js/main.4b56c24a.js.map"
   },
   "entrypoints": [
-    "static/js/main.0154f103.js"
+    "static/js/main.4b56c24a.js"
   ]
 }
