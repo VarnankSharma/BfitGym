@@ -175,9 +175,8 @@ p.timing {
   color: #f0a500; /* Golden headings */
   text-align: center;
 }
-
-.head{
-  text-align: center;
+.trainers-title {
+  text-align: center; /* Center alignment for trainers title */
 }
 
 
