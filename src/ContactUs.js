@@ -6,13 +6,11 @@ function ContactUs() {
     name: '',
     email: '',
     message: '',
-    membershipType: '', // Membership type state
+    membershipType: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const [isSubmitting, setIsSubmitting] = useState(false); // State for loading
-  const [error, setError] = useState(''); // Error state
-
-  // Handle form field change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -20,45 +18,39 @@ function ContactUs() {
     });
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true); // Set loading state
-    setError(''); // Reset error
+    setIsSubmitting(true);
+    setError('');
 
-    const serviceID = 'service_7cwbmwq'; // Your Service ID from EmailJS
-    const templateID = 'template_97xx9bq'; // Your Template ID from EmailJS
-    const userID = 'EOTjI7_7__iX_r6XP'; // Your User ID from EmailJS
+    const { name, email, message, membershipType } = formData;
 
-    if (!formData.name || !formData.email || !formData.message || !formData.membershipType) {
-      setError('Please fill in all the fields.');
+    if (!name || !email || !message || !membershipType) {
+      setError('Please fill in all fields.');
       setIsSubmitting(false);
       return;
     }
 
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message,
-      membership_type: formData.membershipType,
+      from_name: name,
+      from_email: email,
+      message,
+      membership_type: membershipType,
     };
 
     try {
-      // Send the email using EmailJS
-      const response = await emailjs.send(serviceID, templateID, templateParams, userID);
-      console.log('Message sent successfully:', response);
+      await emailjs.send(
+        'service_7cwbmwq',
+        'template_97xx9bq',
+        templateParams,
+        'EOTjI7_7__iX_r6XP'
+      );
       alert('Your message has been sent!');
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-        membershipType: '', // Reset membership type
-      });
-    } catch (error) {
-      console.error('Error sending message:', error);
-      setError('Sorry, something went wrong. Please try again later.');
+      setFormData({ name: '', email: '', message: '', membershipType: '' });
+    } catch (err) {
+      setError('Something went wrong. Please try again later.');
     } finally {
-      setIsSubmitting(false); // Reset loading state
+      setIsSubmitting(false);
     }
   };
 
@@ -67,59 +59,17 @@ function ContactUs() {
       <h2>Contact Us</h2>
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
-
-        <div>
-          <label htmlFor="membershipType">Membership Type:</label>
-          <select
-            id="membershipType"
-            name="membershipType"
-            value={formData.membershipType}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select Membership Type</option>
-            <option value="1 Month">1 Month</option>
-            <option value="3 Months">3 Months</option>
-            <option value="6 Months">6 Months</option>
-            <option value="1 Year">1 Year</option>
-          </select>
-        </div>
-
-        <button type="submit" className="btn" disabled={isSubmitting}>
+        <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+        <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required />
+        <select name="membershipType" value={formData.membershipType} onChange={handleChange} required>
+          <option value="">Select Membership Type</option>
+          <option value="1 Month">1 Month</option>
+          <option value="3 Months">3 Months</option>
+          <option value="6 Months">6 Months</option>
+          <option value="1 Year">1 Year</option>
+        </select>
+        <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </form>
