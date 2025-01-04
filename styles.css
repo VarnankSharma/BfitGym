@@ -120,7 +120,7 @@ ul {
 }
 
 p.timing {
-  font-size: 1.2rem;
+  font-size: 5rem;
 }
 
 /* Membership Section */
@@ -130,7 +130,7 @@ p.timing {
   justify-content: center;
   gap: 1rem;
   padding: 2rem;
-}
+}     
 
 .membership-box {
   background-color: #111; /* Dark background */
@@ -175,6 +175,11 @@ p.timing {
   color: #f0a500; /* Golden headings */
   text-align: center;
 }
+
+.head{
+  text-align: center;
+}
+
 
 .trainer-box span {
   font-size: 1rem;
