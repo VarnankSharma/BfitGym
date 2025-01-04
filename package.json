@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://VarnankSharma.github.io/BfitGym",
-
-
   "dependencies": {
     "cra-template": "1.2.0",
     "emailjs-com": "^3.2.0",
@@ -40,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.3.0"
   }
 }
