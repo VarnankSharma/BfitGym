@@ -28,132 +28,11 @@ a:hover {
   transform: scale(1.05);
 }
 
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #222;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav .logo-container {
-  display: flex;
-  align-items: center; /* Vertically center the logo and gym name */
-  justify-content: flex-start; /* Align items to the left */
-  gap: 10px; /* Space between the logo and the gym name */
-}
-
-nav .logo-container img {
-  width: 50px;
-  height:auto;
-}
-
-nav .logo-container h1 {
-  font-size: 1.5rem;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-nav ul li a {
-  font-size: 1rem;
-}
-
-nav ul li a:hover {
-  color: #FFD700;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #FFD700;
-}
-
-/* Side Menu */
-.side-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 250px;
-  height: 100%;
-  background-color: #111;
-  color: #FFD700;
-  padding: 20px;
-  transition: right 0.3s ease;
-  z-index: 1001;
-}
-
-.side-menu.open {
-  right: 0;
-}
-
-.side-menu ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 50px;
-}
-
-.side-menu ul li {
-  margin: 20px 0;
-}
-
-.side-menu ul li a {
-  font-size: 1.2rem;
-}
-
-.side-menu ul li a:hover {
-  color: #fff;
-}
-
-/* Sections */
-section {
-  padding: 2rem;
-  text-align: center;
-}
-
-section#home {
-  background: url('../src/assets/1.jpeg') center/cover no-repeat;
-  color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-section#home h2 {
-  font-size: 4rem;
-}
-
-section#home p.timing {
-  background-color: #222;
-  color: #FFD700;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  margin-top: 20px;
-}
-
-/* General membership section styling */
+/* Membership Section */
 #membership {
   padding: 2rem;
   text-align: center;
-  background-color: #111; /* Dark background for the section */
-  color: #fff;
+  background-color: #111; /* Dark background */
 }
 
 #membership h2 {
@@ -161,7 +40,6 @@ section#home p.timing {
   margin-bottom: 1.5rem;
 }
 
-/* Container for membership blocks */
 .membership-container {
   display: flex;
   justify-content: center;
@@ -169,114 +47,62 @@ section#home p.timing {
   flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-/* Each membership block */
 .membership-box {
   background-color: #222;
-  color: #FFD700; /* Golden text for the title and price */
+  color: #FFD700;
   padding: 2rem;
-  width: 250px; /* Adjust width as needed */
+  width: 250px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .membership-box:hover {
-  transform: translateY(-10px); /* Box moves slightly up */
-  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Stronger shadow and highlight */
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6);
 }
 
 .membership-box h3 {
-  font-size: 1.8rem; /* Slightly larger font for the title */
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .membership-box span {
   font-size: 1.5rem;
-  font-weight: normal;
 }
 
-/* Mobile responsiveness for small screens */
 @media (max-width: 768px) {
   .membership-container {
-    flex-direction: column; /* Stack the membership blocks vertically */
+    flex-direction: column;
     gap: 15px;
   }
 }
 
-
-/* Mobile responsiveness for small screens */
-@media (max-width: 768px) {
-  .membership-container {
-    flex-direction: column; /* Stack the membership blocks vertically */
-    gap: 15px;
-  }
-}
-
-/* Buttons */
-button, .btn {
-  background-color: #FFD700;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover, .btn:hover {
-  background-color: #fff;
-  color: #FFD700;
-}
-
-/* Responsiveness for small screens */
-@media (max-width: 768px) {
-  .membership-container {
-    flex-direction: column; /* Stack the boxes vertically on smaller screens */
-    gap: 15px;
-  }
-}
-
-
-/* Contact Us */
-form {
-  max-width: 500px;
-  margin: auto;
-  background-color: #222;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-}
-
-form div {
-  margin-bottom: 1rem;
-}
-
-form label {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #FFD700;
-}
-
-form input, form select, form textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #FFD700;
+/* Personal Training */
+#personal-training {
+  text-align: center;
   background-color: #111;
   color: #FFD700;
-  font-size: 1rem;
-}
-.error-message {
-  color: #f44336;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  padding: 2rem;
 }
 
+#personal-training ul {
+  list-style: none;
+  padding: 0;
+}
 
-form button {
+#personal-training h3 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+#personal-training span {
+  font-size: 1.5rem;
+}
+
+.btn {
   background-color: #FFD700;
   color: #000;
   padding: 10px 20px;
@@ -286,32 +112,7 @@ form button {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-form button:hover {
+.btn:hover {
   background-color: #fff;
   color: #FFD700;
-}
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: #FFD700;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  border-top: 2px solid #FFD700;
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .membership-card {
-    width: 100%;
-  }
 }
