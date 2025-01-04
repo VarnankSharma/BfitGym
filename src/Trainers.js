@@ -1,9 +1,10 @@
 import React from 'react';
+import './YourCSSFile.css'; // Import your global CSS
 
 function Trainers() {
   return (
     <section id="trainers">
-      <div className='head'><h2>Meet Our Trainers</h2></div>
+      <h2 className="trainers-title">Meet Our Trainers</h2>
       <div className="trainers-container">
         <div className="trainer-box top-trainer">
           <h3>Karan Thakur</h3>
