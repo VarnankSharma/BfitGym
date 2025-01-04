@@ -13,7 +13,6 @@ body {
   font-size: 16px;
 }
 
-<<<<<<< HEAD
 h1, h2, h3 {
   color: #FFD700; /* Golden text for headings */
 }
@@ -26,23 +25,36 @@ section {
 }
 
 /* Navbar Styling */
-=======
-/* General Styles */
->>>>>>> 450363719e229bef0e9dd70f482fdcea6bb2707b
 nav {
   display: flex;
-  flex-direction: column;
-  background-color: #f8f9fa;
-  padding: 10px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  background-color: #333; /* Dark background */
+  padding: 10px 20px;
+  position: sticky;
+  top: 0; /* Make navbar stick to the top */
+  z-index: 1000;
 }
 
-<<<<<<< HEAD
+nav img {
+  height: 50px;
+  width: auto; /* Maintain aspect ratio */
+}
+
+nav h1 {
+  color: #FFD700; /* Golden text */
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
 nav ul li a {
   color: #FFD700; /* Golden links */
   text-decoration: none;
@@ -54,78 +66,56 @@ nav ul li a:hover {
   color: #fff; /* White on hover */
   text-decoration: underline;
   transform: scale(1.05);
-=======
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.site-title {
-  font-size: 1.5rem;
-}
-
-/* Regular Navbar */
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
->>>>>>> 450363719e229bef0e9dd70f482fdcea6bb2707b
 }
 
 /* Hamburger Menu */
 .hamburger {
   display: none;
-  flex-direction: column;
   cursor: pointer;
+  flex-direction: column;
   gap: 5px;
 }
 
 .hamburger .bar {
-  width: 25px;
+  width: 30px;
   height: 3px;
-  background-color: #333;
+  background-color: #FFD700;
+  border-radius: 5px;
 }
 
 /* Side Menu */
 .side-menu {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px 10px;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1001;
+  transition: right 0.3s ease-in-out;
 }
 
 .side-menu ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.side-menu li {
-  margin-bottom: 15px;
+.side-menu ul li {
+  margin: 20px 0;
+  text-align: center;
 }
 
-.side-menu a {
+.side-menu ul li a {
+  color: #FFD700;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
-<<<<<<< HEAD
 .side-menu ul li a:hover {
   color: #fff;
 }
@@ -142,16 +132,6 @@ nav ul li a:hover {
 
   .side-menu.open {
     right: 0; /* Show side menu when open */
-=======
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
->>>>>>> 450363719e229bef0e9dd70f482fdcea6bb2707b
   }
 }
 
