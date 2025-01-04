@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import logo from '../src/assets/Logo.png'; // Ensure the path is correct
-import './Navbar.css'; // Add a CSS file for styles
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); // Track whether the menu is open or not
