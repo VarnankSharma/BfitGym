@@ -25,15 +25,31 @@ section {
 }
 
 /* Navbar Styling */
+/* Navbar Styling */
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between logo/title and nav links */
   background-color: #333; /* Dark background */
   padding: 10px 20px;
   position: sticky;
   top: 0; /* Make navbar stick to the top */
   z-index: 1000;
+}
+
+/* Ensure logo and title are aligned horizontally */
+.navbar {
+  display: flex;
+  align-items: center; /* Vertically center logo and title */
+  justify-content: space-between; /* Distribute space between elements */
+  width: 100%;
+}
+
+/* Logo and Title */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and site title */
 }
 
 nav img {
