@@ -3,11 +3,12 @@ import React from 'react';
 function PersonalTraining() {
   return (
     <section id="personal-training">
-      <div className="personal-training-container">
+       <div className="personal-training-container">
+       <a href="#contact-us">
         <div className="membership-box">
           <h3>Personal Training</h3>
           <span>Rs 5000/month</span>
-        </div>
+        </div></a>
         <a href="#contact-us" className="button">
           Sign Up Now
         </a>
