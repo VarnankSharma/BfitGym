@@ -6,10 +6,11 @@ function ContactUs() {
     name: '',
     email: '',
     message: '',
-    membershipType: '', // Added membership type state
+    membershipType: '', // Membership type state
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false); // Add state for loading
+  const [isSubmitting, setIsSubmitting] = useState(false); // State for loading
+  const [error, setError] = useState(''); // Error state
 
   // Handle form field change
   const handleChange = (e) => {
@@ -20,45 +21,51 @@ function ContactUs() {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true); // Set loading state
+    setError(''); // Reset error
 
     const serviceID = 'service_7cwbmwq'; // Your Service ID from EmailJS
     const templateID = 'template_97xx9bq'; // Your Template ID from EmailJS
     const userID = 'EOTjI7_7__iX_r6XP'; // Your User ID from EmailJS
 
+    if (!formData.name || !formData.email || !formData.message || !formData.membershipType) {
+      setError('Please fill in all the fields.');
+      setIsSubmitting(false);
+      return;
+    }
+
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
       message: formData.message,
-      membership_type: formData.membershipType, // Include membership type in the template params
+      membership_type: formData.membershipType,
     };
 
-    // Send the email using EmailJS
-    emailjs.send(serviceID, templateID, templateParams, userID)
-      .then((response) => {
-        console.log('Message sent successfully:', response);
-        alert('Your message has been sent!');
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-          membershipType: '', // Reset membership type
-        });
-      })
-      .catch((error) => {
-        console.error('Error sending message:', error);
-        alert('Sorry, something went wrong. Please try again later.');
-      })
-      .finally(() => {
-        setIsSubmitting(false); // Reset loading state
+    try {
+      // Send the email using EmailJS
+      const response = await emailjs.send(serviceID, templateID, templateParams, userID);
+      console.log('Message sent successfully:', response);
+      alert('Your message has been sent!');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+        membershipType: '', // Reset membership type
       });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setError('Sorry, something went wrong. Please try again later.');
+    } finally {
+      setIsSubmitting(false); // Reset loading state
+    }
   };
 
   return (
     <section id="contact-us">
       <h2>Contact Us</h2>
+      {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
@@ -104,8 +111,8 @@ function ContactUs() {
             onChange={handleChange}
             required
           >
-            <option value="">Membership Type</option>
-            <option value="1 Month" >1 Month</option>
+            <option value="">Select Membership Type</option>
+            <option value="1 Month">1 Month</option>
             <option value="3 Months">3 Months</option>
             <option value="6 Months">6 Months</option>
             <option value="1 Year">1 Year</option>
