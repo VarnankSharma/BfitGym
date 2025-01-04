@@ -1,5 +1,5 @@
 import React from 'react';
-import back from '../public/pubAssets/1.jpeg'; // Adjust path as needed
+import back from '../src/assets/1.jpeg'; // Adjust path as needed
 
 function Home() {
   return (

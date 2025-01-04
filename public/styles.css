@@ -102,7 +102,7 @@ ul {
 .home-section {
   height: 100vh;
   background: black; /* Fallback for browsers without support */
-  background-image: url('/public/pubAssets/1.jpeg'); /* Ensure correct path */
+  background-image: url('../src/assets/1.jpeg'); /* Ensure correct path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
