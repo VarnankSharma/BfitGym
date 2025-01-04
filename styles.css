@@ -205,6 +205,15 @@ section#home p.timing {
   }
 }
 
+
+/* Mobile responsiveness for small screens */
+@media (max-width: 768px) {
+  .membership-container {
+    flex-direction: column; /* Stack the membership blocks vertically */
+    gap: 15px;
+  }
+}
+
 /* Buttons */
 button, .btn {
   background-color: #FFD700;
