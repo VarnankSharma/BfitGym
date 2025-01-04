@@ -3,7 +3,7 @@ import React from 'react';
 function Testimonials() {
   return (
     <section id="testimonials">
-      <h2>What Our Members Say</h2>
+      <h2 className="trainers-title">What Our Members Say</h2>
       <div className="testimonial">
         <img src="/assets/4.jpeg" alt="Member 1" />
         <p>"B-Fit transformed my fitness journey. Karan’s expertise and motivating sessions have been life-changing!"</p>
