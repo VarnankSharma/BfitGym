@@ -149,28 +149,60 @@ section#home p.timing {
 }
 
 /* General membership section styling */
-/* Membership Section */
-#membership ul {
+#membership {
+  padding: 2rem;
+  text-align: center;
+  background-color: #111; /* Dark background for the section */
+  color: #fff;
+}
+
+#membership h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Container for membership blocks */
+.membership-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-#membership li {
+/* Each membership block */
+.membership-box {
   background-color: #222;
-  color: #FFD700;
-  padding: 1.5rem;
-  width: 200px;
-  border-radius: 8px;
+  color: #FFD700; /* Golden text for the title and price */
+  padding: 2rem;
+  width: 250px; /* Adjust width as needed */
+  border-radius: 10px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
-#membership li:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+.membership-box:hover {
+  transform: translateY(-10px); /* Box moves slightly up */
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Stronger shadow and highlight */
+}
+
+.membership-box h3 {
+  font-size: 1.8rem; /* Slightly larger font for the title */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.membership-box span {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* Mobile responsiveness for small screens */
+@media (max-width: 768px) {
+  .membership-container {
+    flex-direction: column; /* Stack the membership blocks vertically */
+    gap: 15px;
+  }
 }
 
 /* Buttons */
