@@ -3,7 +3,7 @@ import React from 'react';
 function Trainers() {
   return (
     <section id="trainers">
-      <h2>Meet Our Trainers</h2>
+      <div className='head'><h2>Meet Our Trainers</h2></div>
       <div className="trainers-container">
         <div className="trainer-box top-trainer">
           <h3>Karan Thakur</h3>
