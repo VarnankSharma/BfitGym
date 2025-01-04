@@ -149,49 +149,44 @@ section#home p.timing {
 }
 
 /* General membership section styling */
-#membership {
-  padding: 2rem;
-  text-align: center;
-  background-color: #111; /* Dark background for the section */
-  color: #fff;
-}
-
-/* Membership container to center and style the boxes */
-.membership-container {
+/* Membership Section */
+#membership ul {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Ensure the boxes wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
-/* Each membership plan box */
-.membership-box {
-  background-color: #222; /* Dark background for the boxes */
-  color: #FFD700; /* Golden text for the plan name and price */
-  padding: 2rem;
-  border-radius: 10px; /* Rounded corners */
+#membership li {
+  background-color: #222;
+  color: #FFD700;
+  padding: 1.5rem;
+  width: 200px;
+  border-radius: 8px;
   text-align: center;
-  width: 220px; /* Adjust the width as needed */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
-/* Hover effect to highlight the box */
-.membership-box:hover {
-  transform: translateY(-10px); /* Move the box up on hover */
-  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Stronger shadow and highlight */
+#membership li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
 }
 
-/* Membership plan title and price */
-.membership-box h3 {
-  font-size: 1.8rem; /* Adjust the font size */
-  font-weight: bold;
-  margin-bottom: 10px; /* Add space between title and price */
+/* Buttons */
+button, .btn {
+  background-color: #FFD700;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.membership-box span {
-  font-size: 1.5rem;
-  font-weight: normal;
+button:hover, .btn:hover {
+  background-color: #fff;
+  color: #FFD700;
 }
 
 /* Responsiveness for small screens */
