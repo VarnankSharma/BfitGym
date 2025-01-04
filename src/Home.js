@@ -1,7 +1,7 @@
 import React from 'react';
 function Home() {
   return (
-    <section id="home" className="home-section">
+    <section id="home">
       <div className="welcome">
         <h2>Welcome to Be-Fit Gym</h2>
       </div>
