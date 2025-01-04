@@ -21,7 +21,6 @@ ul {
   list-style: none;
 }
 
-/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -57,7 +56,7 @@ ul {
 .hamburger .bar {
   width: 25px;
   height: 3px;
-  background-color: #f0a500; /* Golden color */
+  background-color: #f0a500;
   margin: 4px 0;
 }
 
@@ -80,7 +79,7 @@ ul {
   color: #fff;
 }
 
-/* Responsive Navbar */
+/* Responsive Design for Hamburger */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -95,8 +94,10 @@ ul {
     right: 0;
     width: 100%;
     padding: 1rem;
+    z-index: 1000;
   }
 }
+
 
 /* Home Section */
 .home-section {
