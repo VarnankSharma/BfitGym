@@ -157,10 +157,6 @@ p.timing {
   font-size: 1.2rem;
   color: #fff; /*a White text */
 }
-.membership-box button{
-  justify-content: center;
-
-}
 /* Trainers Section */
 .trainers-container {
   display: flex;
