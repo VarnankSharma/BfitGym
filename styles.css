@@ -6,14 +6,25 @@ body, h1, h2, h3, p, ul, li {
   font-family: Arial, sans-serif;
 }
 
-/* Basic CSS */
-body, h1, h2, h3, p, ul, li {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+/* General Styling */
+body {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  font-size: 16px;
 }
 
+h1, h2, h3 {
+  color: #FFD700; /* Golden text for headings */
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #111; /* Slightly lighter black for sections */
+  color: #fff; /* White text */
+}
+
+/* Navbar Styling */
 nav {
   display: flex;
   align-items: center;
@@ -44,21 +55,17 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
-  display: inline;
-}
-
 nav ul li a {
   color: #FFD700; /* Golden links */
   text-decoration: none;
   font-size: 1.2rem;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #fff; /* White on hover */
   text-decoration: underline;
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05);
 }
 
 /* Hamburger Menu */
@@ -113,358 +120,85 @@ nav ul li a:hover {
   color: #fff;
 }
 
-/* Hide regular navbar and show hamburger on mobile */
+/* Responsive Navbar */
 @media screen and (max-width: 768px) {
   nav ul {
-    display: none; /* Hide the regular navbar links */
+    display: none; /* Hide regular navbar links */
   }
 
   .hamburger {
-    display: flex; /* Show the hamburger icon */
+    display: flex; /* Show hamburger icon */
   }
 
   .side-menu.open {
-    right: 0; /* Open the side menu */
-  }
-
-  .nav-links.open {
-    display: none; /* Hide regular navbar links when the menu is open */
+    right: 0; /* Show side menu when open */
   }
 }
 
-/* Global styles */
-body {
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
-  font-size: 16px;
-}
-
-h1, h2, h3 {
-  color: #FFD700; /* Golden text for headings */
-}
-
-section {
-  padding: 2rem;
-  text-align: center;
-  background-color: #111; /* Slightly lighter black for sections */
-  color: #fff; /* White text */
-}
-
+/* Sections */
 section#home {
-  background-color: #FFD700; /* Golden background for home section */
-  color: #000; /* Black text for contrast */
-  text-align: center; /* Center text */
+  background-color: #FFD700; /* Golden background */
+  color: #000; /* Black text */
+  text-align: center;
 }
 
 section#home h2 {
-  margin-bottom: 1rem;
-  font-size: 5rem; /* Increased text size for home page */
+  font-size: 5rem; /* Large text for home section */
   font-weight: bold;
 }
 
-.welcome {
-  background-color: #000; /* Black background */
-  color: #FFD700; /* Golden text */
-  padding: 2rem; /* Padding around the text */
-  border-radius: 8px; /* Rounded corners */
-  display: inline-block; /* Ensures the box fits around the text */
-  margin-bottom: 1rem; /* Space below the box */
-}
-
-/* Box around the timing section */
 section#home p.timing {
-  background-color: #222; /* Dark gray background for timing box */
-  color: #FFD700; /* Golden text */
+  background-color: #222;
+  color: #FFD700;
   padding: 1rem;
   border-radius: 8px;
+  font-size: 1.5rem;
+  border: 2px solid #FFD700;
   display: inline-block;
   margin-top: 20px;
-  font-size: 1.5rem;
-  border: 2px solid #FFD700; /* Golden border around the box */
-  position: relative; /* Change from absolute to relative */
-  bottom: auto; /* Remove bottom positioning */
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-section#home p.moto {
-  font-size: 3rem;
-  color: #FFD700;
-  margin-top: 1rem;
-}
-
-/* Trainers Section */
-section#trainers div, section#testimonials div, section#membership ul, section#personal-training p {
-  margin-bottom: 1rem;
-  background-color: #222; /* Dark gray for cards */
-  color: #FFD700; /* Golden text */
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); /* Golden glow effect */
-}
-
-section#trainers div, section#testimonials div {
-  display: inline-block;
-  width: 30%;
-  margin: 1rem;
-  vertical-align: top;
-}
-
-/* Membership Section Styling */
-#membership {
-  padding: 2rem;
-  text-align: center;
-  background-color: #111;
-  color: #fff;
-}
-
-#membership h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #FFD700; /* Golden heading */
-}
-
+/* Membership Section */
 #membership ul {
-  list-style: none;
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 0;
 }
 
 #membership li {
-  background-color: #222; /* Dark background for cards */
-  color: #FFD700; /* Golden text */
+  background-color: #222;
+  color: #FFD700;
   padding: 1.5rem;
   width: 200px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); /* Golden shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
 #membership li:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); /* Increased glow on hover */
-}
-
-#membership li span {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-#membership h3 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  color: #FFD700;
-}
-
-/* Button for Membership */
-#membership .btn {
-  background-color: #FFD700; /* Golden button */
-  color: #000; /* Black text */
-  padding: 10px 20px;
-  margin-top: 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none; /* No underline */
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-#membership .btn:hover {
-  background-color: #fff;
-  color: #FFD700;
-}
-
-/* Personal Training Section Styling */
-#personal-training {
-  padding: 2rem;
-  text-align: center;
-  background-color: #111;
-  color: #fff;
-  margin-top: 2rem;
-}
-
-#personal-training h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #FFD700; /* Golden heading */
-}
-
-#personal-training ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
-}
-
-#personal-training li {
-  background-color: #222; /* Dark background for cards */
-  color: #FFD700; /* Golden text */
-  padding: 1.5rem;
-  width: 200px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); /* Golden shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-#personal-training li:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); /* Increased glow on hover */
-}
-
-#personal-training li span {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-#personal-training h3 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  color: #FFD700;
-}
-
-/* Button for Personal Training */
-#personal-training .btn {
-  background-color: #FFD700; /* Golden button */
-  color: #000; /* Black text */
-  padding: 10px 20px;
-  margin-top: 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none; /* No underline */
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-#personal-training .btn:hover {
-  background-color: #fff;
-  color: #FFD700;
-}
-
-#contact-us {
-  background-color: #f7f7f7;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#contact-us h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form div {
-  margin-bottom: 1rem;
-}
-
-form label {
-  font-weight: bold;
-  color: #333; /* Ensures label text is visible */
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  color: #333; /* Ensures the text inside input and textarea is visible */
-  background-color: #fff; /* White background to make the text visible */
-}
-
-form button {
-  background-color: #FFD700;
-  color: #000;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-form button:hover {
-  background-color: #FFB700;
-}
-
-form button:disabled {
-  background-color: #ddd;
-  cursor: not-allowed;
-}
-
-footer {
-  background-color: #333;
-  color: #FFD700; /* Golden footer text */
-  text-align: center;
-  padding: 1rem;
-}
-
-footer p {
-  margin: 0;
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
 }
 
 /* Buttons */
 button, .btn {
-  background-color: #FFD700; /* Golden buttons */
-  color: #000; /* Black text */
-  border: none;
+  background-color: #FFD700;
+  color: #000;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover, .btn:hover {
-  background-color: #fff; /* White background on hover */
-  color: #FFD700; /* Golden text */
+  background-color: #fff;
+  color: #FFD700;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide the nav links on mobile */
-  }
-
-  /* Show the hamburger menu on mobile */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Side menu visible when it's open */
-  .side-menu.open {
-    right: 0;
-  }
-
-  /* Adjust layout for mobile view */
-  section#trainers div, section#testimonials div {
-    width: 100%; /* Stack trainer and testimonial sections on mobile */
-  }
-
-  #membership ul, #personal-training ul {
-    flex-direction: column; /* Stack membership and personal training cards */
-  }
-
-  #membership li, #personal-training li {
-    width: 100%; /* Full width on smaller screens */
-  }
-
-  section#home p.timing {
-    font-size: 1.2rem; /* Reduce font size for smaller screens */
-    margin-top: 10px; /* Reduce space between elements */
-  }
-
-  section#home p.moto {
-    font-size: 2rem; /* Reduce font size for smaller screens */
-    margin-top: 10px; /* Adjust spacing */
-  }
+/* Footer */
+footer {
+  background-color: #333;
+  color: #FFD700;
+  text-align: center;
+  padding: 1rem;
 }
