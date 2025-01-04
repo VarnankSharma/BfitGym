@@ -1,11 +1,9 @@
 import React from 'react';
-// import back from '../src/assets/1.jpeg';
+import back from './assets/1.jpeg'; // Adjust path as needed
+
 function Home() {
-  return (<section id="home" className="home-section">
-    {/* <div> */}
-      {/* <img src={back} alt="back" /> */}
-    {/* </div> */}
-    
+  return (
+    <section id="home" className="home-section" style={{ backgroundImage: `url(${back})` }}>
       <div className="welcome">
         <h2>Welcome to Be-Fit Gym</h2>
       </div>
