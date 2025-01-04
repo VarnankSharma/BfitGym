@@ -187,6 +187,17 @@ p.timing {
   color: #fff; /* White text */
 }
 
+/* Flexbox for side-by-side trainers */
+.trainer-row {
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly */
+  gap: 2rem;
+}
+
+.trainer-row .trainer-box {
+  flex: 1; /* Make them equally spaced */
+}
+
 /* Styling for trainer images */
 .trainer-img {
   width: 100px;
@@ -196,16 +207,6 @@ p.timing {
   border: 2px solid #f0a500; /* Golden border */
 }
 
-/* Flexbox for side-by-side trainers */
-.trainer-row {
-  display: flex;
-  justify-content: center; /* Centering the rows */
-  gap: 2rem;
-}
-
-.trainer-row .trainer-box {
-  flex: 1; /* Equal width for each trainer box */
-}
 
 /* Testimonials Section */
 #testimonials {
