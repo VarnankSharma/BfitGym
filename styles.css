@@ -412,3 +412,16 @@ button:hover {
 * {
   transition: all 0.3s ease; /* Smooth animations for all elements */
 }
+.personal-training-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  gap: 2rem; /* Adds some space between the membership box and the button */
+  padding: 2rem;
+}
+
+.button {
+  display: block;
+  width: 50%; /* Adjust width if necessary */
+  text-align: center;
+}
