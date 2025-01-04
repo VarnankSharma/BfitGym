@@ -2,7 +2,9 @@ import React from 'react';
 
 function PersonalTraining() {
   return (
+    
     <section id="personal-training">
+      <div className="membership-box">
       <h2>Personal Training</h2>
       <ul>
         <li>
@@ -11,7 +13,9 @@ function PersonalTraining() {
         </li>
       </ul>
       <a href="#signup" className="btn">Sign Up Now</a>
+      </div>
     </section>
+    
   );
 }
 
