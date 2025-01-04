@@ -1,5 +1,4 @@
 import React from 'react';
-import './YourCSSFile.css'; // Import your global CSS
 
 function Trainers() {
   return (
