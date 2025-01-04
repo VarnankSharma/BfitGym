@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -147,96 +148,29 @@ section#home p.timing {
   margin-top: 20px;
 }
 
-/* General membership section styling */
-#membership {
-  padding: 2rem;
+/* Membership & Personal Training */
+.membership-card {
+  background-color: #222;
+  color: #FFD700;
+  padding: 1.5rem;
+  width: 250px;
+  border-radius: 8px;
+  margin: 1rem;
   text-align: center;
-  background-color: #111; /* Dark background for the section */
-  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
-#membership h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+.membership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
 }
 
-/* Container for membership blocks */
 .membership-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
-
-/* Each membership block */
-.membership-box {
-  background-color: #222;
-  color: #FFD700; /* Golden text for the title and price */
-  padding: 2rem;
-  width: 250px; /* Adjust width as needed */
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.membership-box:hover {
-  transform: translateY(-10px); /* Box moves slightly up */
-  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Stronger shadow and highlight */
-}
-
-.membership-box h3 {
-  font-size: 1.8rem; /* Slightly larger font for the title */
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.membership-box span {
-  font-size: 1.5rem;
-  font-weight: normal;
-}
-
-/* Mobile responsiveness for small screens */
-@media (max-width: 768px) {
-  .membership-container {
-    flex-direction: column; /* Stack the membership blocks vertically */
-    gap: 15px;
-  }
-}
-
-
-/* Mobile responsiveness for small screens */
-@media (max-width: 768px) {
-  .membership-container {
-    flex-direction: column; /* Stack the membership blocks vertically */
-    gap: 15px;
-  }
-}
-
-/* Buttons */
-button, .btn {
-  background-color: #FFD700;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover, .btn:hover {
-  background-color: #fff;
-  color: #FFD700;
-}
-
-/* Responsiveness for small screens */
-@media (max-width: 768px) {
-  .membership-container {
-    flex-direction: column; /* Stack the boxes vertically on smaller screens */
-    gap: 15px;
-  }
-}
-
 
 /* Contact Us */
 form {
