@@ -10,7 +10,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="logo-container">
         <img src={logo} alt="Gym Logo" className="logo" />
-        <h1 className="site-title">B-Fit Gym</h1>
+        <h1 className="site-title">Be-Fit Gym</h1>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
         <span className="bar"></span>
