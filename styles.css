@@ -1,142 +1,150 @@
-/* General Reset */
-* {
+/* Reset some basic styling */
+body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #fff;
   background-color: #000; /* Black background */
-  line-height: 1.6;
+  color: #fff; /* White text */
+  font-size: 16px;
 }
 
 h1, h2, h3 {
-  color: #FFD700; /* Golden text */
+  color: #FFD700; /* Golden text for headings */
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease, transform 0.3s ease;
+section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #111; /* Slightly lighter black for sections */
+  color: #fff; /* White text */
 }
 
-a:hover {
-  color: #fff;
-  transform: scale(1.05);
-}
-
-/* Navbar */
+/* Navbar Styling */
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  background-color: #333; /* Dark background */
   padding: 10px 20px;
-  background-color: #222;
   position: sticky;
-  top: 0;
+  top: 0; /* Make navbar stick to the top */
   z-index: 1000;
 }
 
-nav .logo-container {
-  display: flex;
-  align-items: center; /* Vertically center the logo and gym name */
-  justify-content: flex-start; /* Align items to the left */
-  gap: 10px; /* Space between the logo and the gym name */
+nav img {
+  height: 50px;
+  width: auto; /* Maintain aspect ratio */
 }
 
-nav .logo-container img {
-  width: 50px;
-  height:auto;
-}
-
-nav .logo-container h1 {
-  font-size: 1.5rem;
+nav h1 {
+  color: #FFD700; /* Golden text */
+  margin: 0;
+  font-size: 2rem;
 }
 
 nav ul {
-  display: flex;
-  gap: 20px;
   list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-  font-size: 1rem;
+  color: #FFD700; /* Golden links */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #FFD700;
+  color: #fff; /* White on hover */
+  text-decoration: underline;
+  transform: scale(1.05);
 }
 
+/* Hamburger Menu */
 .hamburger {
   display: none;
+  cursor: pointer;
   flex-direction: column;
   gap: 5px;
-  cursor: pointer;
 }
 
 .hamburger .bar {
-  width: 25px;
+  width: 30px;
   height: 3px;
   background-color: #FFD700;
+  border-radius: 5px;
 }
 
 /* Side Menu */
 .side-menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -250px;
   width: 250px;
   height: 100%;
-  background-color: #111;
-  color: #FFD700;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px;
-  transition: right 0.3s ease;
   z-index: 1001;
-}
-
-.side-menu.open {
-  right: 0;
+  transition: right 0.3s ease-in-out;
 }
 
 .side-menu ul {
   list-style: none;
   padding: 0;
-  margin-top: 50px;
 }
 
 .side-menu ul li {
   margin: 20px 0;
+  text-align: center;
 }
 
 .side-menu ul li a {
-  font-size: 1.2rem;
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
 .side-menu ul li a:hover {
   color: #fff;
 }
 
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide regular navbar links */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .side-menu.open {
+    right: 0; /* Show side menu when open */
+  }
+}
+
 /* Sections */
-section {
-  padding: 2rem;
+section#home {
+  background-color: #FFD700; /* Golden background */
+  color: #000; /* Black text */
   text-align: center;
 }
 
-section#home {
-  background: url('../src/assets/1.jpeg') center/cover no-repeat;
-  color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 section#home h2 {
-  font-size: 4rem;
+  font-size: 5rem; /* Large text for home section */
+  font-weight: bold;
 }
 
 section#home p.timing {
@@ -144,82 +152,45 @@ section#home p.timing {
   color: #FFD700;
   padding: 1rem;
   border-radius: 8px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  border: 2px solid #FFD700;
+  display: inline-block;
   margin-top: 20px;
 }
 
-/* Membership & Personal Training */
-.membership-card {
+/* Membership Section */
+#membership ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#membership li {
   background-color: #222;
   color: #FFD700;
   padding: 1.5rem;
-  width: 250px;
+  width: 200px;
   border-radius: 8px;
-  margin: 1rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
-.membership-card:hover {
+#membership li:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
 }
 
-.membership-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Contact Us */
-form {
-  max-width: 500px;
-  margin: auto;
-  background-color: #222;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-}
-
-form div {
-  margin-bottom: 1rem;
-}
-
-form label {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #FFD700;
-}
-
-form input, form select, form textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #FFD700;
-  background-color: #111;
-  color: #FFD700;
-  font-size: 1rem;
-}
-.error-message {
-  color: #f44336;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-
-form button {
+/* Buttons */
+button, .btn {
   background-color: #FFD700;
   color: #000;
   padding: 10px 20px;
   border-radius: 5px;
-  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-form button:hover {
+button:hover, .btn:hover {
   background-color: #fff;
   color: #FFD700;
 }
@@ -230,21 +201,4 @@ footer {
   color: #FFD700;
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
-  border-top: 2px solid #FFD700;
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .membership-card {
-    width: 100%;
-  }
 }
