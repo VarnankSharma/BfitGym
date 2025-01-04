@@ -4,28 +4,25 @@ function Membership() {
   return (
     <section id="membership">
       <h2>Membership Plans</h2>
-      <ul>
-        <li>
+      <div className="membership-container">
+        <div className="membership-box">
           <h3>1 Month</h3>
           <span>Rs 1300</span>
-        </li>
-        <li>
+        </div>
+        <div className="membership-box">
           <h3>3 Months</h3>
           <span>Rs 3000</span>
-        </li>
-        <li>
+        </div>
+        <div className="membership-box">
           <h3>6 Months</h3>
           <span>Rs 5500 (1 Month Free)</span>
-        </li>
-        <li>
+        </div>
+        <div className="membership-box">
           <h3>1 Year</h3>
           <span>Rs 10000 (1 Month Free + Gym Bag)</span>
-        </li>
-      </ul>
-     
-      
+        </div>
+      </div>
     </section>
-   
   );
 }
 
