@@ -4,7 +4,7 @@ function PersonalTraining() {
   return (
     <section id="personal-training">
       <h2>Personal Training</h2>
-      <div className="membership-container">
+      <div className="personal-training-container">
         <div className="membership-box">
           <h3>Personal Training</h3>
           <span>Rs 5000/month</span>
