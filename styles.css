@@ -17,13 +17,6 @@ h1, h2, h3 {
   color: #FFD700; /* Golden text for headings */
 }
 
-section {
-  padding: 2rem;
-  text-align: center;
-  background-color: #111; /* Slightly lighter black for sections */
-  color: #fff; /* White text */
-}
-
 /* Navbar Styling */
 .navbar {
   display: flex;
@@ -31,6 +24,9 @@ section {
   align-items: center;
   background-color: #333;
   padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo-container {
@@ -40,18 +36,19 @@ section {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 50px; /* Adjusted logo size */
+  height: auto;
 }
 
 .site-title {
   font-size: 1.5rem;
   color: #FFD700;
+  margin: 0;
 }
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .nav-links li {
@@ -61,7 +58,7 @@ section {
 .nav-links li a {
   color: #FFD700;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -105,41 +102,4 @@ section {
   .hamburger {
     display: flex;
   }
-}
-
-/* Home Section Styling */
-#home {
-  background-image: url('../assets/gym-background.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff; /* White text */
-  text-align: center;
-  padding: 5rem 2rem;
-}
-
-#home h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  background-color: #000; /* Black background */
-  color: #FFD700; /* Yellow text */
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-}
-
-#home p {
-  font-size: 1.5rem;
-  margin-top: 20px;
-}
-
-#home p.timing {
-  background-color: #000; /* Black box for timings */
-  color: #FFD700; /* Golden text */
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1.5rem;
-  display: inline-block;
-  border: 2px solid #FFD700;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
