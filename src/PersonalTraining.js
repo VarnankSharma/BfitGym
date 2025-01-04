@@ -10,7 +10,7 @@ function PersonalTraining() {
           <span>Rs 5000/month</span>
         </div>
       </div>
-      <a href="#contact-us" className="butt" style={{ textAlign: 'center', display: 'inline-block' }}>
+      <a href="#contact-us" className="butt" style={{ textAlign: 'center', display: 'inline-block', alignItems:'center'}}>
   Sign Up Now
 </a>
 
