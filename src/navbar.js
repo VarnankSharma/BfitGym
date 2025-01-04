@@ -12,7 +12,7 @@ function Navbar() {
     <nav>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <img src={logo} alt="Gym Logo" />
-        <h1>B Fit Gym</h1>
+        <h1>Be Fit Gym</h1>
       </div>
 
       {/* Hamburger Menu */}

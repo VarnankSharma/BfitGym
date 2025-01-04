@@ -17,7 +17,7 @@ function Home() {
       }}
     >
         <div className='welcome'>
-        <h2>Welcome to B-Fit Gym</h2>
+        <h2>Welcome to Be-Fit Gym</h2>
 
         </div>
      
