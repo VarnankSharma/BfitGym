@@ -115,7 +115,7 @@ ul {
   padding: 2rem;
 }
 
-home-section.welcome{
+.home-section.welcome {
   font-size: 5rem;
 }
 
@@ -137,6 +137,7 @@ p.timing {
   padding: 2rem;
 }     
 
+
 .membership-box {
   background-color: #111; /* Dark background */
   border: 1px solid #f0a500; /* Golden border */
@@ -155,8 +156,9 @@ p.timing {
 
 .membership-box span {
   font-size: 1.2rem;
-  color: #fff; /*a White text */
+  color: #fff; /* White text */
 }
+
 .trainers-container {
   display: flex;
   flex-direction: column;
@@ -206,7 +208,6 @@ p.timing {
   margin-bottom: 10px;
   border: 2px solid #f0a500; /* Golden border */
 }
-
 
 /* Testimonials Section */
 #testimonials {
@@ -299,10 +300,11 @@ footer {
   background-color: #222;
   color: #f0a500; /* Golden text */
 }
+
 /* Navbar Links */
 .nav-links li a:hover {
   color: #f0a500; /* Golden color on hover */
-  text-decoration: underline; /* Adds an underline effect */
+  text-decoration: underline; /* Adds underline effect */
 }
 
 /* Membership Boxes */
@@ -354,6 +356,7 @@ button:hover {
   box-shadow: 0 4px 15px rgba(240, 165, 0, 0.5); /* Golden shadow */
   transition: all 0.3s ease;
 }
+
 .button {
   background-color: #f0a500;
   color: white;
@@ -362,29 +365,7 @@ button:hover {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: white;
-  color: #f0a500;
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
-}
-* {
-  transition: all 0.3s ease; /* Smooth animations for all elements */
-} 
-/* Membership Boxes */
-
-/* Generic Buttons */
-.button {
-  background-color: #f0a500;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth hover effects */
+  transition: background-color 0.3s ease; /* Smooth hover effects */
 }
 
 .button:hover {
@@ -393,35 +374,6 @@ button:hover {
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5); /* Glow effect */
 }
 
-/* Cards or Boxes */
-.card {
-  background-color: #111; /* Dark background */
-  border: 1px solid #f0a500; /* Golden border */
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-}
-
-.card:hover {
-  transform: scale(1.05); /* Slight zoom */
-  box-shadow: 0 4px 15px rgba(240, 165, 0, 0.5); /* Golden shadow */
-}
-
-/* Global Smooth Animations */
 * {
   transition: all 0.3s ease; /* Smooth animations for all elements */
-}
-.personal-training-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  gap: 2rem; /* Adds some space between the membership box and the button */
-  padding: 2rem;
-}
-
-.button {
-  display: block;
-  width: 50%; /* Adjust width if necessary */
-  text-align: center;
 }
