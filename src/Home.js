@@ -1,10 +1,10 @@
 import React from 'react';
-import back from '../src/assets/1.jpeg';
+// import back from '../src/assets/1.jpeg';
 function Home() {
   return (<section id="home" className="home-section">
-    <div>
-      <img src={back} alt="back" />
-    </div>
+    {/* <div> */}
+      {/* <img src={back} alt="back" /> */}
+    {/* </div> */}
     
       <div className="welcome">
         <h2>Welcome to Be-Fit Gym</h2>
