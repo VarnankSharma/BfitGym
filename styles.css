@@ -136,7 +136,7 @@ ul {
   
 }
 .home-section .welcome h2{
-  font-size: inherit; /* Inherit font size from parent or a suitable container */
+  font-size: 5rem; /* Inherit font size from parent or a suitable container */
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6); /* Dark background with slight transparency for contrast */
   padding: 2rem;
