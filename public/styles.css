@@ -392,3 +392,20 @@ button:hover {
   display: block;
   margin: 0 auto; /* Center button horizontally */
 }
+@media (max-width: 768px) {
+  .home-section.welcome {
+    font-size: 3rem; /* Adjusted font size for smaller screens */
+    padding: 1rem; /* Add padding for better spacing */
+  }
+
+  .motto {
+    font-size: 2rem; /* Reduce font size */
+    margin: 5px 0;
+  }
+
+  .home-section {
+    justify-content: center; /* Ensure text is vertically centered */
+    align-items: center; /* Ensure text is horizontally centered */
+    padding: 1rem; /* Add padding for better readability */
+  }
+}
