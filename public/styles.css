@@ -135,8 +135,8 @@ ul {
   margin-bottom: 1rem; 
   
 }
-.home-section.welcome h2{
-  font-size: 5rem;
+.home-section .welcome {
+  font-size: 3rem; /* Adjusted font size */
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6); /* Dark background with slight transparency for contrast */
   padding: 2rem;
@@ -144,7 +144,6 @@ ul {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Adds some subtle shadow */
   max-width: 800px;
   margin: 0 auto; /* Centering */
-  
 }
 
 .motto {
