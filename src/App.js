@@ -5,19 +5,19 @@ import Membership from './Membership';
 import Testimonials from './Testimonials';
 import PersonalTraining from './PersonalTraining';
 import Footer from './Footer';
-import ContactUs from './ContactUs'; // Ensure ContactUs is imported
-import Navbar from './navbar';
+import ContactUs from './ContactUs';
+import Navbar from './Navbar';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Navbar />
       <Home />
       <Trainers />
       <Membership />
       <PersonalTraining />
       <Testimonials />
-      <ContactUs /> {/* Make sure the ContactUs component is added here */}
+      <ContactUs />
       <Footer />
     </div>
   );

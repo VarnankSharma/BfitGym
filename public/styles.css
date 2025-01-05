@@ -112,12 +112,38 @@ ul {
   }
 }
 
-/* Apply animation to home section */
+/* Home Section */
 .home-section {
-  animation: slideUp 1s ease-out;
-  opacity: 0; /* Ensure it starts invisible */
-  animation-fill-mode: forwards; /* Retain final state of animation */
+  height: 100vh;
+  background: transparent;
+  background-image: url('./assets/1.jpeg'); /* Adjust path if necessary */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  animation: slideUp 1s ease-out forwards;
 }
+
+.home-section .welcome {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.motto {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.timing {
+  font-size: 2rem;
+}
+
 .scroll-cue {
   position: absolute;
   bottom: 20px;
@@ -148,35 +174,17 @@ ul {
   }
 }
 
-.home-section {
-  height: 100vh;
-  background: transparent; /* Fallback for browsers without support */
-  background-image: url('../src/assets/1.jpeg'); /* Ensure correct path */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 2rem;
+@media (max-width: 768px) {
+  .home-section .welcome {
+    font-size: 3rem;
+  }
+  .motto {
+    font-size: 2rem;
+  }
+  .timing {
+    font-size: 1.5rem;
+  }
 }
-
-.home-section.welcome {
-  font-size: 5rem;
-}
-
-.motto {
-  font-size: 3rem;
-  margin: 10px 0;
-}
-
-p.timing {
-  font-size: 3rem;
-}
-
 /* Membership Section */
 .membership-container {
   display: flex;
