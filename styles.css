@@ -134,6 +134,16 @@ ul {
   font-size: 7rem;
   margin-bottom: 1rem;
 }
+.home-section.welcome h2{
+  font-size: 7rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background with slight transparency for contrast */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Adds some subtle shadow */
+  max-width: 800px;
+  margin: 0 auto; /* Centering */
+}
 
 .motto {
   font-size: 3rem;
