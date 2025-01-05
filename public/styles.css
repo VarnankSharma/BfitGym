@@ -100,6 +100,54 @@ ul {
 
 
 /* Home Section */
+/* Keyframe animation for slide-up effect */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px); /* Start slightly lower */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateY(0); /* End at original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply animation to home section */
+.home-section {
+  animation: slideUp 1s ease-out;
+  opacity: 0; /* Ensure it starts invisible */
+  animation-fill-mode: forwards; /* Retain final state of animation */
+}
+.scroll-cue {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+.scroll-cue .arrow {
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #f0a500;
+  border-right: 2px solid #f0a500;
+  transform: rotate(45deg);
+  margin: 10px auto 0;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 .home-section {
   height: 100vh;
   background: transparent; /* Fallback for browsers without support */
