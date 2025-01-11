@@ -1,12 +1,12 @@
 import React from 'react';
-
+import karan from '../src/assets/Karan.jpg';
 function Trainers() {
   return (
     <section id="trainers">
       <h2 className="trainers-title">Meet Our Trainers</h2>
       <div className="trainers-container">
         <div className="trainer-box top-trainer">
-          <img src="karan-image.jpg" alt="Karan Thakur" className="trainer-img" />
+          <img src={karan} alt="Karan Thakur" className="trainer-img" />
           <h3>Karan Thakur</h3>
           <span>Experience: 17 years</span>
         </div>
