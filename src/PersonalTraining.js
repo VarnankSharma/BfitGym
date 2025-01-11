@@ -8,6 +8,14 @@ function PersonalTraining() {
         <div className="membership-box">
           <h3>Personal Training</h3>
           <span>Rs 5000/month</span>
+          <ul>
+            <li>Customized Workout Plans</li>
+            <li> Nutrution Plan</li>
+            <li>One To One Attention</li>
+            <li>Goal Setting and Progress Tracking</li>
+            <li>Stress Management</li>
+          </ul>
+          <button>Join Today</button>
         </div></a>
         
       </div>

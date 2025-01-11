@@ -7,12 +7,14 @@ import PersonalTraining from './PersonalTraining';
 import Footer from './Footer';
 import ContactUs from './ContactUs';
 import Navbar from './Navbar';
+import Facilities from './Facilities';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Home />
+      <Facilities/>
       <Trainers />
       <Membership />
       <PersonalTraining />

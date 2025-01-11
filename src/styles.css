@@ -103,7 +103,7 @@ ul {
 /* Keyframe animation for slide-up effect */
 @keyframes slideUp {
   from {
-    transform: translateY(50px); /* Start slightly lower */
+    transform: translateY(75px); /* Start slightly lower */
     opacity: 0; /* Start invisible */
   }
   to {
@@ -116,7 +116,7 @@ ul {
 .home-section {
   height: 100vh;
   background: transparent;
-  background-image: url('./assets/1.jpeg'); /* Adjust path if necessary */
+  background-image: url('./assets/1.jpeg'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -126,10 +126,9 @@ ul {
   align-items: center;
   text-align: center;
   color: white;
-  padding: 2rem;
+  padding: 3rem; /* Increase padding for better spacing */
   animation: slideUp 1s ease-out forwards;
 }
-
 .home-section .welcome {
   font-size: 7rem;
   margin-bottom: 1rem; 
@@ -151,10 +150,12 @@ ul {
 .motto {
   font-size: 3rem;
   margin-bottom: 1rem;
+  position:relative;
 }
 
 .timing {
   font-size: 2rem;
+  position:relative ;
 }
 
 .scroll-cue {
@@ -188,46 +189,164 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .home-section .welcome {
+  
+  .home-section .welcome h2 {
     font-size: 3rem;
+    padding-bottom: 0%;
   }
   .motto {
-    font-size: 2rem;
+    position: relative;
+    font-size: 1rem;
   }
   .timing {
-    font-size: 1.5rem;
+    position:relative;
+    font-size: 1rem;
   }
-}
-/* Membership Section */
-.membership-container {
+}.membership-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
-}     
-
+  gap: 20px;
+  padding: 50px 0;
+  background-color: #000;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
 
 .membership-box {
-  background-color: #111; /* Dark background */
-  border: 1px solid #f0a500; /* Golden border */
-  border-radius: 8px;
-  padding: 1.5rem;
+  background-color: #d9d9d9;
+  color: #000;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 300px; /* Default width for large screens */
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px; /* Space between boxes for smaller screens */
 }
 
 .membership-box h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
   margin-bottom: 10px;
-  color: #f0a500; /* Golden headings */
-  text-align: center;
+  text-transform: uppercase;
 }
 
 .membership-box span {
-  font-size: 1.2rem;
-  color: #fff; /* White text */
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
 }
+
+.membership-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.membership-box ul li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.membership-box ul li::before {
+  content: "✔"; /* Checkmark */
+  color: #ffd700; /* Gold color */
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.membership-box button {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.membership-box button:hover {
+  background-color: #e6c200;
+}
+
+.membership-box.highlight {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #ffd700;
+  transform: scale(1.05); /* Slightly enlarge highlighted card */
+}
+
+.membership-box.highlight button {
+  background-color: #000;
+  color: #ffd700;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .membership-container {
+    justify-content: space-evenly; /* Spread the boxes evenly */
+    gap: 10px; /* Adjust gap between cards */
+  }
+
+  .membership-box {
+    width: 280px; /* Adjust width slightly for small screens */
+    padding: 20px; /* Slightly reduced padding */
+  }
+
+  .membership-box h3 {
+    font-size: 1.6rem; /* Adjust heading font size */
+  }
+
+  .membership-box span {
+    font-size: 1.4rem; /* Adjust span font size */
+  }
+
+  .membership-box ul li {
+    font-size: 1.1rem; /* Slightly reduce list item font size */
+  }
+
+  .membership-box button {
+    padding: 9px 18px; /* Adjust button size */
+    font-size: 1rem; /* Adjust button font size */
+  }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+  .membership-container {
+    flex-direction: column; /* Stack the cards vertically on extra small screens */
+    align-items: center; /* Center the cards */
+  }
+
+  .membership-box {
+    width: 90%; /* Full width of the container */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .membership-box h3 {
+    font-size: 1.4rem; /* Adjust font size for headings */
+  }
+
+  .membership-box span {
+    font-size: 1.2rem; /* Adjust font size for span */
+  }
+
+  .membership-box ul li {
+    font-size: 1rem; /* Further reduce font size */
+  }
+
+  .membership-box button {
+    padding: 8px 16px; /* Adjust button size for smaller screens */
+    font-size: 0.9rem; /* Reduce button font size */
+  }
+}
+
 
 .trainers-container {
   display: flex;
@@ -260,37 +379,64 @@ ul {
 }
 
 /* Flexbox for side-by-side trainers */
+/* 
 .trainer-row {
   display: flex;
-  justify-content: space-between; /* Distribute space evenly */
+  justify-content: space-between; /* Distribute space evenly 
   gap: 2rem;
 }
 
 .trainer-row .trainer-box {
-  flex: 1; /* Make them equally spaced */
-}
+  flex: 1; /* Make them equally spaced 
+} */
 
 /* Styling for trainer images */
 .trainer-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 500px; /* Default width (for larger screens) */
+  height: 400px; /* Default height (for larger screens) */
+  border-radius: 50%; /* Round the image */
   margin-bottom: 10px;
   border: 2px solid #f0a500; /* Golden border */
+  object-fit:inherit; /* Ensure the image covers the area */
 }
 
-/* Testimonials Section */
-#testimonials {
-  padding: 2rem;
-  background-color: #111; /* Dark background */
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .trainer-img {
+    width: 420px; /* Smaller width for small screens */
+    height: 400px; /* Adjusted height to make the image rectangular */
+    /* border-radius: 10px; Optional: Make it slightly rounded instead of circular */
+  }
 }
+
+/* Optional: Further Adjustments for Extra Small Screens */
+@media (max-width: 480px) {
+  .trainer-img {
+    width: 100px; /* Even smaller width for extra small screens */
+    height: 100px;  /* Adjusted height */
+  }
+}
+
+/* Styling for Kirti and Sonu (currently commented out) */
+/* 
+.trainer-row .trainer-box .trainer-img {
+  width: 200px; /* Smaller image size for Kirti and Sonu 
+  height: 200px; /* Matching height 
+}
+
+.trainer-row .trainer-box h3 {
+  font-size: 1.1rem;
+}
+*/
 
 .testimonial {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #222;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 1.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
 .testimonial img {
@@ -298,12 +444,14 @@ ul {
   height: 100px;
   border-radius: 50%;
   margin-bottom: 10px;
-  border: 2px solid #f0a500; /* Golden border */
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
 }
 
 .testimonial p {
-  font-size: 1.2rem;
-  color: #fff; /* White text */
+  font-size: 1.1rem;
 }
 
 /* Contact Us Section */
@@ -476,5 +624,79 @@ button:hover {
     justify-content: center; /* Ensure text is vertically centered */
     align-items: center; /* Ensure text is horizontally centered */
     padding: 1rem; /* Add padding for better readability */
+  }
+}
+/* Facilities Section */
+#facilities {
+  padding: 3rem;
+  background-color: #111; /* Dark background */
+}
+
+.facilities-title {
+  text-align: center;
+  color: #f0a500; /* Golden color */
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Container to hold the facility boxes */
+.facilities-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+  gap: 2rem;
+}
+
+.facility-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.facility-img {
+  width: 100%;
+  height: 600px;
+  object-fit:cover;
+  transition: transform 0.3s ease;
+}
+
+.facility-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.facility-box:hover .facility-img {
+  transform: scale(1.1);
+}
+
+.facility-box:hover .facility-name {
+  transform: translateY(0);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .facilities-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .facilities-container {
+    grid-template-columns: 1fr; /* 1 column for extra small screens */
+  }
+
+  .facility-name {
+    font-size: 1.2rem;
   }
 }

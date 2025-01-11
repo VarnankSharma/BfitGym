@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../src/assets/Logo.png'; // Adjusted to reflect public directory usage
+import { Squash as Hamburger } from 'hamburger-react';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,13 +13,16 @@ function Navbar() {
         <img src={logo} alt="Gym Logo" className="logo" />
         <h1 className="site-title">Be-Fit Gym</h1>
       </div>
-      <div className="hamburger" onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+
+      {/* Using the Hamburger component */}
+      <div className="hamburger">
+        <Hamburger toggled={menuOpen} toggle={toggleMenu} />
       </div>
+
+      {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
         <li><a href="#home">Home</a></li>
+        <li><a href='#facilities'>Our Facilities</a></li>
         <li><a href="#trainers">Trainers</a></li>
         <li><a href="#membership">Membership</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
