@@ -10,7 +10,7 @@ function Trainers() {
           <h3>Karan Thakur</h3>
           <span>Experience: 17 years</span>
         </div>
-        <div className="trainer-row">
+        {/* <div className="trainer-row">
           <div className="trainer-box">
             <img src="kirti-image.jpg" alt="Kirti" className="trainer-img" />
             <h3>Kirti</h3>
@@ -21,7 +21,7 @@ function Trainers() {
             <h3>Sonu</h3>
             <span>Zumba Trainer</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
