@@ -61,7 +61,10 @@ function ContactUs() {
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-        <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required />
+        <input 
+  type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required 
+/>
+        <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} />
         <select name="membershipType" value={formData.membershipType} onChange={handleChange} required>
           <option value="">Select Membership Type</option>
           <option value="1 Month">1 Month</option>
