@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import back from './assets/1.jpeg'; // Adjust path if necessary
+import back from './assets/1.png'; // Adjust path if necessary
 
 function Home() {
   useEffect(() => {

@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import member1 from '../src/assets/mem1.JPG';
 import member2 from '../src/assets/2.jpeg';
-import member3 from '../src/assets/1.jpeg';
+import member3 from '../src/assets/2.jpeg';
 function Testimonials() {
   return (
     <section id="testimonials">

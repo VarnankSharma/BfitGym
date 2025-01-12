@@ -9,7 +9,7 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #fff;
-  background-color: black; /* Black background */
+  background-color: black;
 }
 
 a {
@@ -21,13 +21,14 @@ ul {
   list-style: none;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #222;
-  color: #f0a500; /* Golden text */
+  color: #f0a500;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -65,10 +66,6 @@ ul {
   gap: 1.5rem;
 }
 
-.nav-links.active {
-  display: block;
-}
-
 .nav-links li a {
   color: #f0a500;
   font-size: 1rem;
@@ -79,7 +76,6 @@ ul {
   color: #fff;
 }
 
-/* Responsive Design for Hamburger */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -98,64 +94,61 @@ ul {
   }
 }
 
-
-/* Home Section */
-/* Keyframe animation for slide-up effect */
-@keyframes slideUp {
-  from {
-    transform: translateY(75px); /* Start slightly lower */
-    opacity: 0; /* Start invisible */
-  }
-  to {
-    transform: translateY(0); /* End at original position */
-    opacity: 1; /* Fully visible */
-  }
-}
-
 /* Home Section */
 .home-section {
   height: 100vh;
-  background: transparent;
-  background-image: url('./assets/1.jpeg'); 
-  background-size: cover;
+  background-image: url('./assets/1.png');
+  background-size:cover;
   background-position: center;
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
-  padding: 3rem; /* Increase padding for better spacing */
+  padding: 3rem;
   animation: slideUp 1s ease-out forwards;
 }
+
 .home-section .welcome {
   font-size: 7rem;
-  margin-bottom: 1rem; 
-  
-}
-.home-section .welcome h2{
-  font-size: 5rem
-  ; /* Inherit font size from parent or a suitable container */
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.6); /* Dark background with slight transparency for contrast */
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Adds some subtle shadow */
-  max-width: 800px;
-  margin: 0 auto; /* Centering */
+  margin-bottom: 1rem;
 }
 
+.home-section h2 {
+  font-size: 4rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 .motto {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  position:relative;
 }
 
 .timing {
-  font-size: 2rem;
-  position:relative ;
+  font-size: 1.8rem;
+}
+
+.shop-now-btn {
+  background-color: #f0a500;
+  color: #222;
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.shop-now-btn:hover {
+  background-color: #fff;
+  color: #222;
 }
 
 .scroll-cue {
@@ -176,6 +169,17 @@ ul {
   margin: 10px auto 0;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(75px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -188,21 +192,7 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
-  
-  .home-section .welcome h2 {
-    font-size: 3rem;
-    padding-bottom: 0%;
-  }
-  .motto {
-    position: relative;
-    font-size: 1rem;
-  }
-  .timing {
-    position:relative;
-    font-size: 1rem;
-  }
-}.membership-container {
+.membership-container {
   display: flex;
   justify-content: center;
   gap: 20px;
