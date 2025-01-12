@@ -98,8 +98,9 @@ ul {
 .home-section {
   height: 100vh;
   background-image: url('./assets/1.png');
-  background-size:cover;
+  background-size: cover; /* Change to 'cover' for better responsiveness */
   background-position: center;
+  background-attachment: fixed; /* Optional: Adds parallax effect */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,6 +110,7 @@ ul {
   animation: slideUp 1s ease-out forwards;
 }
 
+/* Text and content styling */
 .home-section .welcome {
   font-size: 7rem;
   margin-bottom: 1rem;
@@ -151,6 +153,7 @@ ul {
   color: #222;
 }
 
+/* Scroll cue animation */
 .scroll-cue {
   position: absolute;
   bottom: 20px;
@@ -169,6 +172,7 @@ ul {
   margin: 10px auto 0;
 }
 
+/* Keyframe animations */
 @keyframes slideUp {
   from {
     transform: translateY(75px);
@@ -189,6 +193,67 @@ ul {
   }
   60% {
     transform: translateY(-5px);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .home-section .welcome {
+    font-size: 5rem;
+  }
+
+  .home-section h2 {
+    font-size: 3rem;
+  }
+
+  .motto {
+    font-size: 2rem;
+  }
+
+  .shop-now-btn {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    padding: 2rem;
+  }
+
+  .home-section .welcome {
+    font-size: 4rem;
+  }
+
+  .home-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .motto {
+    font-size: 1.8rem;
+  }
+
+  .shop-now-btn {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section .welcome {
+    font-size: 3rem;
+  }
+
+  .home-section h2 {
+    font-size: 2rem;
+  }
+
+  .motto {
+    font-size: 1.5rem;
+  }
+
+  .shop-now-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
   }
 }
 
