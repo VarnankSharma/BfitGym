@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/BfitGym/static/css/main.e716b936.css",
-    "main.js": "/BfitGym/static/js/main.d6122d8d.js",
+    "main.css": "/BfitGym/static/css/main.587fe339.css",
+    "main.js": "/BfitGym/static/js/main.dccffa18.js",
+    "static/media/1.png": "/BfitGym/static/media/1.0414028793c79454c380.png",
     "static/media/facility6.png": "/BfitGym/static/media/facility6.c44c11bede03ff2ace09.png",
     "static/media/mem1.JPG": "/BfitGym/static/media/mem1.a9c612c5faa785fc2978.JPG",
     "static/media/facility1.jpg": "/BfitGym/static/media/facility1.f58a7a737d659081ce5b.jpg",
-    "static/media/1.png": "/BfitGym/static/media/1.2a250d01c1ef73c88334.png",
     "static/media/Karan.jpg": "/BfitGym/static/media/Karan.6c9cb93fb1ed14fefda0.jpg",
     "static/media/Logo.png": "/BfitGym/static/media/Logo.1bab01283d6f5a57a14c.png",
     "static/media/facility3.jpg": "/BfitGym/static/media/facility3.849cbdc751ee80d6db7c.jpg",
     "static/media/facility2.jpg": "/BfitGym/static/media/facility2.0e059f53d13259714e94.jpg",
     "static/media/2.jpeg": "/BfitGym/static/media/2.f9229f9fde37ee79768d.jpeg",
     "index.html": "/BfitGym/index.html",
-    "main.e716b936.css.map": "/BfitGym/static/css/main.e716b936.css.map",
-    "main.d6122d8d.js.map": "/BfitGym/static/js/main.d6122d8d.js.map"
+    "main.587fe339.css.map": "/BfitGym/static/css/main.587fe339.css.map",
+    "main.dccffa18.js.map": "/BfitGym/static/js/main.dccffa18.js.map"
   },
   "entrypoints": [
-    "static/css/main.e716b936.css",
-    "static/js/main.d6122d8d.js"
+    "static/css/main.587fe339.css",
+    "static/js/main.dccffa18.js"
   ]
 }
