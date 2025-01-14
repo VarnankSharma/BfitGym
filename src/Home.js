@@ -17,10 +17,25 @@ function Home() {
       </div>
       <p className="motto">Your journey to fitness starts here!</p>
       <p className="timing">Timings: 6:00 AM - 11:00 AM / 4:00 PM - 9:00 PM</p>
-      <div className="scroll-cue">
-        <span>Scroll</span>
-        <div className="arrow"></div>
-      </div>
+      <div
+  className="scroll-cue"
+  onMouseOver={() => {
+    window.scrollTo({
+      top: window.innerHeight, // Scrolls to the next section
+      behavior: "smooth",
+    });
+  }}
+  onClick={() => {
+    window.scrollTo({
+      top: window.innerHeight, // Scrolls to the next section
+      behavior: "smooth",
+    });
+  }}
+>
+  <span>Scroll</span>
+  <div className="arrow"></div>
+</div>
+
     </section>
   );
 }

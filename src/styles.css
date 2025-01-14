@@ -153,7 +153,6 @@ ul {
   color: #222;
 }
 
-/* Scroll cue animation */
 .scroll-cue {
   position: absolute;
   bottom: 20px;
@@ -161,6 +160,7 @@ ul {
   transform: translateX(-50%);
   text-align: center;
   animation: bounce 2s infinite;
+  cursor: pointer; /* Add a pointer cursor for clickability */
 }
 
 .scroll-cue .arrow {
@@ -195,6 +195,7 @@ ul {
     transform: translateY(-5px);
   }
 }
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
