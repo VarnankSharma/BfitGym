@@ -94,6 +94,12 @@ ul {
   }
 }
 
+.nav-links.active {
+  display: flex;
+  transform: translateY(0);
+}
+
+
 /* Home Section */
 .home-section {
   height: 100vh;
@@ -175,7 +181,7 @@ ul {
 /* Keyframe animations */
 @keyframes slideUp {
   from {
-    transform: translateY(75px);
+    transform: translateY(100px);
     opacity: 0;
   }
   to {
